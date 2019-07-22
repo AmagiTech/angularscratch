@@ -1,0 +1,11 @@
+<label>Name of The Server</label>
+<!-- One Side Binding -->
+<!-- <input type="text" (input)='onServerNameChanged($event)' /> -->
+<!-- Two Side Binding -->
+<input type="text" [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>
+<button [disabled]='!canAddServer' (click)='onServerCreated()'>Add Server</button>
+
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
+
+<app-server *ngFor="let server of servers"></app-server>

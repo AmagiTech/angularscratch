@@ -1,0 +1,11 @@
+<h1>App Component HTML</h1>
+<!-- <div class="app-servers"></div> -->
+<!-- <div app-servers></div> -->
+<app-servers></app-servers>
+
+<hr>
+
+<button (click)="onAdded()">Add</button>
+<ul>
+    <li *ngFor="let item of items; let i=index" [ngStyle]="{'backgroundColor': i > 4 ? 'red' : 'white'}" [ngClass]="{'white-text': i > 4 }">{{ item }}</li>
+</ul>
